@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>공지사항</title>
+    <style>
+        body, html{
+            margin: 0px;
+            padding: 0px;
+            background-color: #bbc4fd;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header{
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        h1 a{
+            color: black;
+            text-decoration: none;
+        }
+        h1 a:hover{
+            color: white;
+        }
+        .loginBtn{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        .loginBtn a{
+            background-color: #6748fe;
+            color: white;
+            padding: 5px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 1rem;
+        }
+        .loginBtn a:hover{
+            background-color: aliceblue;
+            color: #6748fe;
+        }
+        nav ul{
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        nav a{
+            color: #6748fe;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+        nav a:hover{
+            color: #6748fe;
+            background-color: aliceblue;
+        }
+        section{
+            background-color: white;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            position: relative;
+        }
+        h3 {
+            color: #6748fe;
+        }
+        .topBtn{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        form{
+            display: flex;
+            align-items: center;
+        }
+        select, input, button{
+            padding: 8px;
+            margin-right: 10px;
+            border-radius: 1rem;
+            border: 1px solid #6748fe;
+            font-size: 15px;
+        }
+        input{
+            width: 200px;
+        }
+        input:focus{
+            border-color: #6748fe;
+            outline: none;
+        }
+        button{
+            background-color: #6748fe;
+            color: white;
+        }
+        button:hover{
+            background-color: aliceblue;
+            color: #6748fe;
+
+        }
+        .write{
+            margin-left: auto;
+        }
+        .write a{
+            background-color: #6748fe;
+            color: white;
+            padding: 9px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 1rem;
+        }
+        .write a:hover{
+            background-color: aliceblue;
+            color: #6748fe;
+        }
+        footer{
+            color: white;
+            text-align: right;
+            padding: 10px;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td{
+            padding: 10px;
+            text-align: left;
+        }
+        th{
+            background-color: #f2f2f2;
+        }
+        tr:hover{
+            background-color: #f9f9f9;
+        }
+        .paging{
+            text-align: center;
+            margin-top: 10px;
+        }
+        .paging a{
+            margin: 0 5px;
+            padding: 8px 12px;
+            background-color: #6748fe;
+            color: white;
+            text-decoration: none;
+            border-radius: 1rem;
+        }
+        .paging a:hover{
+            background-color: aliceblue;
+            color: #6748fe;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">MUSIC IS LIFE!</a></h1>
+        <div class="loginBtn">
+            <a href="login.html">Login</a>
+            <a href="signUp.html">Sign up</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="notice_board.html">공지사항</a></li>
+            <li><a href="music_board.html">음악 추천 게시판</a></li>
+            <li><a href="artist_board.html">아티스트 정보 게시판</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="topBtn">
+            <form>
+                <select name="searchType">
+                    <option value="nickname">닉네임</option>
+                    <option value="title">제목</option>
+                    <option value="date">작성일</option>
+                    <option value="hit">조회수</option>
+                </select>
+                <input type="text" name="searchValue" placeholder="검색어 입력">
+                <button type="button">검색</button>
+            </form>
+            <div class="write">
+                <a href="write.html">글쓰기</a>
+            </div>
+        </div>
+        <h3>공지사항</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>글번호</th>
+                    <th>제목</th>
+                    <th>닉네임</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td><a href="modify.html">제목입니다.rrrrrrrrrrrrr</a></td>
+                    <td>관리자</td>
+                    <td>2024.09.13</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>제목입니다.</td>
+                    <td>관리자</td>
+                    <td>2024.09.13</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>제목입니다.</td>
+                    <td>관리자</td>
+                    <td>2024.09.13</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>제목입니다.</td>
+                    <td>관리자</td>
+                    <td>2024.09.13</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>제목입니다.</td>
+                    <td>관리자</td>
+                    <td>2024.09.13</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>제목입니다.</td>
+                    <td>관리자</td>
+                    <td>2024.09.13</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>제목입니다.</td>
+                    <td>관리자</td>
+                    <td>2024.09.13</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>제목입니다.</td>
+                    <td>관리자</td>
+                    <td>2024.09.13</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>제목입니다.</td>
+                    <td>관리자</td>
+                    <td>2024.09.13</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>제목입니다.</td>
+                    <td>관리자</td>
+                    <td>2024.09.13</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="paging">
+            <a>&laquo;</a>
+            <a>1</a>
+            <a>2</a>
+            <a>3</a>
+            <a>4</a>
+            <a>5</a>
+            <a>&raquo;</a>
+        </div>
+
+    </section>
+    <footer>
+        &copy; MADE BY GaWonKim
+    </footer>
+</body>
+</html>

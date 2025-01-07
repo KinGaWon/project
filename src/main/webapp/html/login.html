@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body, html{
+            margin: 0px;
+            padding: 0px;
+            background-color: #bbc4fd;
+
+        }
+        a:link, a:visited {
+            text-decoration: none;
+            color: #6748fe;
+        }
+        .loginForm{
+            background-color: white;
+            border-radius: 1rem;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            position: fixed;
+        }
+        h2{
+            text-align: center;
+            color: #6748fe;
+        }
+        .input{
+            background-color: white;
+            border-radius: 1rem;
+            border-style: dashed;
+            border-color: #bbc4fd;
+            padding: 10px;
+            margin: 8px;
+            width: 250px;
+        }
+        .inputBtn{
+            background-color: #6748fe;
+            color: white;
+            border-radius: 1rem;
+            border-style: none;
+            padding: 10px;
+            margin: 8px;
+            width: 250px;
+        }
+        .inputBtn:hover{
+            background-color: #bbc4fd;
+            color: #6748fe;
+        }
+        span{
+            font-size: smaller;
+        }
+    </style>
+</head>
+<body>
+    <div class="loginForm">
+        <form action="loginOk.jsp" method="post">
+            <h2>Login</h2>
+                <input class="input" type="text" name="id" placeholder="ID"><br>
+                <input class="input" type="password" name="pw" placeholder="PASSWORD">
+                <input class="inputBtn" type="submit" value="Login">
+            <br>
+        </form>
+        <span>계정이 없으신가요?</span>
+        <a href="signUp.html">sign up</a>
+    </div>
+</body>
+</html>
