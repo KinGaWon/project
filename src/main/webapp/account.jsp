@@ -114,16 +114,27 @@
 </head>
 <body>
     <div class="loginForm">
-    	<h2>계정 설정</h2>
-    	<strong><%= session.getAttribute("nickname") %></strong>님<br><br>
-        <form action="accountOk.jsp" method="post">
-        <input type="hidden" name="uno" value="<%= uno %>">
-                <label><input type="radio" name="state" value="E" checked>활성화</label>
-                <label><input type="radio" name="state" value="D">비활성화</label><br><br>
-                <button>저장</button>
-		</form>
-        <a href="index.jsp" style="font-size: small">홈으로 돌아가기</a>
-    </div>
+	    <h2>계정 설정</h2>
+	    <strong><%= session.getAttribute("nickname") %></strong>님<br><br>
+	
+	    <form action="accountOk.jsp" method="post">
+	        <% state = (String) session.getAttribute("state"); %>
+	
+	        <input type="hidden" name="uno" value="<%= session.getAttribute("uno") %>">
+	
+	        <label>
+	            <input type="radio" name="state" value="E" <%= "E".equals(state) ? "checked" : "" %>> 활성화
+	        </label>
+	        <label>
+	            <input type="radio" name="state" value="D" <%= "D".equals(state) ? "checked" : "" %>> 비활성화
+	        </label>
+	        <br><br>
+	
+	        <button>저장</button>
+	    </form>
+	
+	    <a href="index.jsp" style="font-size: small">홈으로 돌아가기</a>
+	</div>
 </body>
 </html>
 <%
