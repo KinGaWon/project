@@ -36,11 +36,13 @@
 				int uno = rs.getInt("uno");
 				String nickname = rs.getString("nickname");
 				String authorization = rs.getString("authorization");
+				String state = rs.getString("state");
 			
 				session.setAttribute("id", id);
 				session.setAttribute("uno", uno);
 				session.setAttribute("nickname", nickname);
 				session.setAttribute("authorization", authorization);
+				session.setAttribute("state", state);
 %>
 			<script>
 				location.href = "<%= request.getContextPath()%>/index.jsp";
