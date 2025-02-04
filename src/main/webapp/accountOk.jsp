@@ -34,8 +34,8 @@
 				if(state.equals("E")){
 %>
 					<script>
-						alert("계정이 활성화 되었습니다.");
-						location.href="index.jsp";
+						alert("계정이 활성화 되었습니다. 다시 로그인 해 주세요.");
+						location.href="logout.jsp";
 					</script>
 <%
 				}else{
